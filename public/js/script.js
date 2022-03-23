@@ -129,21 +129,7 @@ function errorDetalhes(result) {
 function successCadastrar(result) {
     console.log('script.successCadastrar');
 
-    /*
-    // torna o container 'detalhes' invisible
-    document.querySelector('#content').style.display = 'none';
-    document.querySelector('#detalhes').style.display = 'none';
-
-    // torna o container 'register' (cadastro) visible
-    let cadastrar = document.querySelector('#cadastrar');
-
-    console.log('result : ', result);
-
-    cadastrar.innerHTML = result;
-    cadastrar.style.display = 'block';
-    */
-
-    console.log('result : ', result);
+    //console.log('result : ', result);
 
     // exibe o resultado
     let content = $('#content');

@@ -37,31 +37,33 @@
         </div>
     </section>
 
-    <section>
-        <article>
-            <div id="content" class="main">
+    <main>
+        <section>
+            <article>
+                <div id="content" class="main">
 
-                <% if(pokedex) {  %>
-                    <% for(let pokemom of pokedex) { %>
+                    <% if(pokedex) {  %>
+                        <% for(let pokemom of pokedex) { %>
 
-                        <div class="card" title="Clique na imagem" data-id=<%= pokemom.id %>>
-                            <div style="width:230px;height:230px;">
-                                <img style="width:100%;" src= <%= pokemom.imagem %>  />
-                            </div>
-                            <div class="card-text">
-                                <h3 style="color:black "><%= pokemom.nome %> </h3> 
-                                <div style="text-align: center;background-color: cornflowerblue;">
-                                    <span style="color: white;"> <%= pokemom.tipo %> </span>
+                            <div class="card" title="Clique na imagem" data-id=<%= pokemom.id %>>
+                                <div style="width:230px;height:230px;">
+                                    <img style="width:100%;" src= <%= pokemom.imagem %>  />
+                                </div>
+                                <div class="card-text">
+                                    <h3 style="color:black "><%= pokemom.nome %> </h3> 
+                                    <div style="text-align: center;background-color: cornflowerblue;">
+                                        <span style="color: white;"> <%= pokemom.tipo %> </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                        <% } %>
                     <% } %>
-                <% } %>
 
-            </div>
-        </article>
-    </section>
+                </div>
+            </article>
+        </section>
+    </main>
 
     <!-- JQUERY -->
     <script src="/js/jquery.min.js"></script>

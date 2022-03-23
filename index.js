@@ -94,8 +94,6 @@ app.post("/cadastrar/new", function (req, res) {
     // adiciona dados do pokemon no array
     adicionaPokemon( pokeData );
 
-    //console.log( 'pokeData:', pokeData);
-
     // pokemon adicionado com sucesso
     message = `Sucesso!. O pokemon ${pokeData.nome} foi adicionado à lista`;
         
@@ -113,8 +111,6 @@ app.get("/detalhes", function (req, res) {
 app.get("/detalhes/:id", function (req, res) {
 
     let id =req.params.id;
-
-  //  console.log('id:', id);
 
     // localizar pokemon
     let pokemon = findPokemon(id);
