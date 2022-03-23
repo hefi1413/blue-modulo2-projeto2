@@ -1,0 +1,27 @@
+{
+  "name": "blue-modulo2-projeto2",
+  "version": "1.0.0",
+  "description": "Projeto 2 Do Módulo 2 - Curso BackEnd",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hefi1413/blue-modulo2-projeto2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hefi1413/blue-modulo2-projeto2/issues"
+  },
+  "homepage": "https://github.com/hefi1413/blue-modulo2-projeto2#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}

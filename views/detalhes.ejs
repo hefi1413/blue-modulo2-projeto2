@@ -1,0 +1,33 @@
+
+<section id="detalhes_pokemon">
+
+    <div style="text-align: center;margin:05px;">
+        <h2> <%= pokemon.nome %> </h2>
+    </div>
+    
+    <div style="display: flex; gap:25px;margin:0 auto;">
+        <div style="width:400px; height: 400px;margin:10px;">
+            <img style="width: 100%;" src= <%= pokemon.imagem %> />
+        </div>
+        <div>
+            <h3 class="h3-details"> Descrição </h3>
+            <span class="span-details"> <%= pokemon.descricao %> </span>
+
+            <h3 class="h3-details"> Número </h3>
+            <span> <%= pokemon.numero %> </span>
+
+            <h3 class="h3-details"> Tipo </h3>
+            <span> <%= pokemon.tipo %> </span>
+
+            <h3 class="h3-details"> Categoria </h3>
+            <span> <%= pokemon.categoria %> </span>
+        </div>
+    </div>
+
+    <div style="display: flex; gap:25px;margin:0 auto;">
+        <div style="width:400px;margin:10px;display:flex;">
+            <a href="/" > Voltar </a>
+        </div>
+    </div>
+
+</section>
