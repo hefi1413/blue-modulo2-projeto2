@@ -1,72 +1,70 @@
 
-    <section id="cadastrar">
-        <div  style="width: 100%;line-height: 2;">
+<section id="cadastrar" >
 
-            <div style="text-align: center;">
-                <h1>CADASTRO DE POKEMON</h1>
+    <form action="/cadastrar/new" method="post">
+
+        <div style="text-align: center;">
+            <h1>CADASTRO</h1>
+        </div>
+
+        <div >
+            <label for="nome"> Nome: </label> <br>
+            <input style="width:50%;" type="text" name="nome" id="nome" placeholder="Digite o nome" required> <br>
+        </div>
+
+        <div >
+            <label for="numero">Número: </label> <br>
+            <input style="width:25%;"  type="text" name="numero" id="numero" placeholder="Digite o número" required> <br>
+        </div>
+
+        <div >
+            <label for="tipo">Tipo: </label> <br>
+            <select name="tipo" id="tipo" style="width:50%;"> <br>
+                <option value="normal">Normal</option>
+                <option value="fire">Fire</option>
+                <option value="grass">Grasss</option>
+                <option value="poison">Poison</option>
+                <option value="fly">Fly</option>
+                <option value="eletric">Eletric</option>
+            </select>                    
+        </div>
+
+        <div >
+            <label for="imagem">Imagem: </label> <br>
+            <input style="width:50%;" type="text" name="imagem" id="imagem" placeholder="url imagem" required> <br>
+        </div>
+
+        <div > 
+            <label for="descricao">Descrição: </label> <br>
+            <textarea name="descricao" id="descricao" rows="4" cols="53" required> </textarea> <br>
+        </div>
+
+        <div >
+            <label for="altura">Altura: </label> <br>
+            <input style="width: 25%;" type="text" name="altura" id="altura" placeholder="Digite a altura" required> <br>
+        </div>
+
+        <div>
+            <label for="peso">Peso: </label> <br>
+            <input style="width: 25%;" type="text" name="peso" id="peso" placeholder="Digite o peso" required> <br>
+        </div>
+
+        <div >
+            <label for="categoria">Categoria: </label> <br>
+            <select name="categoria" id="categoria" style="width:50%;">
+                <option value="seed">Seed</option>
+                <option value="lizrd">Lizard</option>
+                <option value="turtle">Tiny turtle</option>
+                <option value="worm">Worm</option>
+                <option value="bird">Bird</option>
+                </select>                    
             </div>
 
-            <form action="/cadastrar/new" method="post">
-                <div >
-                    <label for="nome"> Nome: </label> <br>
-                    <input style="width:50%;" type="text" name="nome" id="nome" placeholder="Digite o nome" required> <br>
-                </div>
-
-                <div >
-                    <label for="numero">Número: </label> <br>
-                    <input style="width:25%;"  type="text" name="numero" id="numero" placeholder="Digite o número" required> <br>
-                </div>
-
-                <div >
-                    <label for="tipo">Tipo: </label> <br>
-                    <select name="tipo" id="tipo" style="width:25%;"> <br>
-                      <option value="normal">Normal</option>
-                      <option value="fire">Fire</option>
-                      <option value="grass">Grasss</option>
-                      <option value="poison">Poison</option>
-                      <option value="fly">Fly</option>
-                      <option value="eletric">Eletric</option>
-                    </select>                    
-                </div>
-
-                <div >
-                    <label for="imagem">Imagem: </label> <br>
-                    <input style="width:50%;" type="text" name="imagem" id="imagem" placeholder="url imagem" required> <br>
-                </div>
-
-                <div > 
-                    <label for="descricao">Descrição: </label> <br>
-                    <textarea name="descricao" id="descricao" rows="4" cols="53"> </textarea> <br>
-                </div>
-
-                <div >
-                    <label for="altura">Altura: </label> <br>
-                    <input style="width: 25%;" type="text" name="altura" id="altura" placeholder="Digite a altura"> <br>
-                </div>
-
-                <div>
-                    <label for="peso">Peso: </label> <br>
-                    <input style="width: 25%;" type="text" name="peso" id="peso" placeholder="Digite o peso"> <br>
-                </div>
-
-                <div >
-                    <label for="categoria">Categoria: </label> <br>
-                    <select name="categoria" id="categoria" style="width:25%;">
-                        <option value="seed">Seed</option>
-                        <option value="lizrd">Lizard</option>
-                        <option value="turtle">Tiny turtle</option>
-                        <option value="worm">Worm</option>
-                        <option value="bird">Bird</option>
-                      </select>                    
-                  </div>
-
-                <div>
-                    <label for="habilidade">Habilidade: </label> <br>
-                    <input style="width: 50%;" type="text" name="habilidade" id="habilidade" placeholder="habilidade">
-                </div>
-                <div style="display: flex;" >
-                    <button class="btn" type="submit" id="btn-cadastrar-new"> Adicionar </button>
-                </div>
-            </form>
+        <div>
+            <label for="habilidade">Habilidade: </label> <br>
+            <input style="width: 50%;" type="text" name="habilidade" id="habilidade" placeholder="habilidade" required>
         </div>
-    </section>
+        <br>
+        <button class="btn" type="submit" id="btn-cadastrar-new"> Adicionar </button>
+    </form>
+</section>

@@ -22,11 +22,11 @@ $(document).on('click', '#close', function() {
 
 // associa click ao container do pokemon (detalhes)
 $(document).on('click', '.card', function() {
-    console.log('script.click');
+    console.log('script.card');
 
     // recupera o numero do pokemon
-    let divContainer = this;
-    let idPokemom = divContainer.getAttribute('data-id');
+    let content =this;
+    let idPokemom =content.getAttribute('data-id');
     let postData =null;
 
     //console.log('idPokemom:', idPokemom);
@@ -42,7 +42,6 @@ $(document).on('click', '.card', function() {
     });
 
 });
-
 
 // associa click ao menu CADASTRAR
 $(document).on('click', '#menu-cadastrar', function(event) {
@@ -63,56 +62,14 @@ $(document).on('click', '#menu-cadastrar', function(event) {
 
 });
 
-/*
-// associa click ao botão adicionar
-$(document).on('click', '', function(event) {
-    console.log('script.new');
-
-    event.preventDefault();
-        
-    let nome =document.querySelector('#nome').value;
-    let numero =document.querySelector('#numero').value;
-    let tipo =document.querySelector('#tipo').value;
-    let imagem =document.querySelector('#imagem').value;
-    let descricao =document.querySelector('#descricao').value;
-    let altura =document.querySelector('#altura').value;
-    let peso =document.querySelector('#peso').value;
-    let categoria =document.querySelector('#categoria').value;
-    let habilidade =document.querySelector('#habilidade').value;
-
-    let postData ={'nome': nome, 'numero': numero, 'tipo': tipo, 'imagem': imagem, 'descricao': descricao, 
-            'altura': altura, 'peso': peso, 'categoria': categoria, 'habilidade': habilidade };
-    // POST com dados do pokemon
-    $.ajax({
-        url: '/cadastrar/new',
-        method: "post",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(postData),
-        success: successCadastrar,
-        error: errorCadastrar
-    });
-
-});
-    */
-
 // evento de sucesso da resposta DETALHES
 function successDetalhes(result) {
     console.log('script.successDetalhes');
 
-    /*
-    // torna o container 'content' invisible
-    document.querySelector('#content').style.display = 'none';
-    document.querySelector('#cadastrar').style.display = 'none';
-    // torna o container 'detalhes' visible
-    let detalhes = document.querySelector('#detalhes');
-    detalhes.innerHTML = result;
-    detalhes.style.display = 'flex';
-    */
-
     // exibe o resultado
     let content = $('#content');
     content.css('display','none');
-    content.removeClass('main');
+    content.removeClass('main add');
     content.addClass('details');
     content.html( result );
     content.css('display','flex');
@@ -124,7 +81,6 @@ function errorDetalhes(result) {
     
 }
 
-
 // evento de sucesso da resposta de CADASTRAR
 function successCadastrar(result) {
     console.log('script.successCadastrar');
@@ -134,11 +90,10 @@ function successCadastrar(result) {
     // exibe o resultado
     let content = $('#content');
     content.css('display','none');
-    content.removeClass('main');
+    content.removeClass('main details');
     content.addClass('add');
     content.html( result );
-    content.css('display','block');
-
+    content.css('display','flex');
 }
 
 // evento de erro da resposta CADASTRAR

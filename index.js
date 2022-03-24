@@ -33,6 +33,7 @@ function adicionaPokemon(pokemon) {
 // carrega os pokemons no array
 function loadPokedex() {
 
+    // verificação para não duplicar items e manter (RAM) algum item adicionado pelo usuário.
     if( pokedex.length > 0 ) {
         return;
     };
@@ -47,13 +48,13 @@ function loadPokedex() {
                     'numero': 4,
                     'tipo': 'fire',
                     'imagem': '/img/004.png',
-                    'descricao':'Tem preefrencia por oisas quentes.' } );
+                    'descricao':'Tem preferência por coisas quentes.' } );
 
     adicionaPokemon( { 'nome': 'Charizzard',
                     'numero': 6,
                     'tipo': 'fly',
                     'imagem': '/img/006.png',
-                    'descricao':'PIt spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames' } );
+                    'descricao':'Ele cospe fogo que é quente o suficiente para derreter pedregulhos. Pode causar incêndios florestais soprando chamas.' } );
 
 }
 
@@ -78,6 +79,8 @@ app.get("/", function (req, res) {
 
 // GET - cadastramento
 app.get("/cadastrar", function (req, res) {
+    console.log(req.method + '  ' + req.url);
+
     res.redirect("/");
 });
 
@@ -104,6 +107,8 @@ app.post("/cadastrar/new", function (req, res) {
 
 // GET - detalhes
 app.get("/detalhes", function (req, res) {
+    console.log(req.method + '  ' + req.url);
+    
     res.redirect("/");
 });
 
