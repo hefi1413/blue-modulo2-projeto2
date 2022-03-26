@@ -108,7 +108,7 @@ app.post("/cadastrar/new", function (req, res) {
 // GET - detalhes
 app.get("/detalhes", function (req, res) {
     console.log(req.method + '  ' + req.url);
-    
+
     res.redirect("/");
 });
 
